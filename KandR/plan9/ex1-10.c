@@ -33,4 +33,6 @@ main()
 	Bflush(out);
 	Bterm(in);
 	Bterm(out);
+	
+	exits(nil);
 }
