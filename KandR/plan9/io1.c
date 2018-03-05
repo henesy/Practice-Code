@@ -9,10 +9,8 @@ main()
 	int err;
 
 	err = read(0, buf, sizeof(buf));
-	while (err != 0)
-	{
-		if(err == -1)
-		{
+	while (err != 0){
+		if(err == -1){
 			/* err is ≤0 when EOF or err, see read(2) */
 			exits("read() failure.");
 		}
@@ -20,5 +18,5 @@ main()
 		err = read(0, buf, sizeof(buf));
 	}
 	
-	exits(0);
+	exits(nil);
 }

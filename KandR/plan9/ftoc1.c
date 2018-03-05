@@ -14,8 +14,7 @@ main()
 	step = 20;	/* step size */
 
 	fahr = lower;
-	while (fahr <= upper)
-	{
+	while (fahr <= upper){
 		celsius = 5 * (fahr-32) / 9;
 		print("%d\t%d\n", fahr, celsius);
 		fahr = fahr + step;

@@ -13,21 +13,14 @@ main()
 
 	c = w = 0;
 	while((c = Bgetrune(in)) > 0)
-	{
-		if(c == '\n' || c == '\040' || c == '\t')
-		{
+		if(c == '\n' || c == '\040' || c == '\t'){
 			if(w == 1)
-			{
 				Bputrune(out, '\n');
-			}
 			w = 0;
-		}
-		else
-		{
+		}else{
 			w = 1;
 			Bputrune(out, c);
 		}
-	}
 	Bflush(out);
 	Bterm(in);
 	Bterm(out);

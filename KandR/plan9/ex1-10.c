@@ -11,25 +11,18 @@ main()
 	Biobuf* out = Bfdopen(1, OWRITE);
 
 	while((c = Bgetrune(in)) > 0)
-	{
-		if (c == '\t')
-		{
+		if (c == '\t'){
 			Bputrune(out, '\134');
 			Bputrune(out, 't');
-		}
-		else if (c == '\b')
-		{
+		}else if (c == '\b'){
 			Bputrune(out, '\134');
 			Bputrune(out, 'b');
-		}
-		else if (c == '\\')
-		{
+		}else if (c == '\\'){
 			Bputrune(out, '\134');
 			Bputrune(out, '\134');
-		}
-		else
+		}else
 			Bputrune(out, c);
-	}
+
 	Bflush(out);
 	Bterm(in);
 	Bterm(out);

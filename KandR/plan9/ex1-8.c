@@ -13,14 +13,13 @@ main()
 
 	b = 0, t = 0, nl = 0;
 	while ((c = Bgetrune(in)) > 0)
-	{
 		if (c == '\040')
 			b+=1;
 		else if (c == '\t')
 			t+=1;
 		else if (c == '\n')
 			nl+=1;
-	}
+
 	print("Blanks: %d\nTabs: %d\nLines: %d\n", b, t, nl);
 	Bterm(in);
 	
